@@ -92,7 +92,16 @@ export function OnboardingPage() {
     defaultValues,
   })
 
-  const values = useWatch({ control })
+  const watchedValues = useWatch({ control, defaultValue: defaultValues })
+  const values: OnboardingValues = {
+    ...defaultValues,
+    ...watchedValues,
+    goals: watchedValues.goals ?? defaultValues.goals,
+    notifications: {
+      ...defaultValues.notifications,
+      ...watchedValues.notifications,
+    },
+  }
   const progress = (step / totalSteps) * 100
 
   const passwordScore = useMemo(() => {
