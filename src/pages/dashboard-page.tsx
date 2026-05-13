@@ -46,7 +46,7 @@ export function DashboardPage() {
 
   if (loading) {
     return (
-      <div className="container py-8">
+      <div className="w-full px-4 py-8 md:px-6">
         <div className="grid gap-5 md:grid-cols-4">
           {[...Array(4)].map((_, i) => (
             <Skeleton key={i} className="h-28" />
@@ -58,7 +58,7 @@ export function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-secondary/40">
-      <div className="mx-auto flex max-w-[1400px]">
+      <div className="flex w-full">
         <aside className="sticky top-0 hidden h-screen w-72 border-r border-border bg-background px-4 py-6 lg:block">
           <div className="mb-10 flex items-center justify-between">
             <p className="text-xl font-bold">FitTrack</p>
