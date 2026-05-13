@@ -81,9 +81,3 @@ Build and lint:
 npm run build
 npm run lint
 ```
-
-## Notes for Submission
-
-- Deploy to Vercel or Netlify for live demo.
-- Add screenshots/GIFs in a `screenshots/` folder and reference them here.
-- If needed, split further UI sections into smaller feature components for team scaling.
